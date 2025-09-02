@@ -1,0 +1,39 @@
+-- Current sql file was generated after introspecting the database
+-- If you want to run this migration please uncomment this line
+-- ALTER TABLE "account" ADD COLUMN "code" text NOT NULL;
+-- ALTER TABLE "account" ADD COLUMN "name" text NOT NULL;
+-- ALTER TABLE "account" ADD COLUMN "type" text NOT NULL;
+-- ALTER TABLE "account" ADD COLUMN "description" text;
+-- ALTER TABLE "account" ADD COLUMN "created_at" timestamp DEFAULT now() NOT NULL;
+-- ALTER TABLE "account" ADD COLUMN "updated_at" timestamp DEFAULT now() NOT NULL;
+-- 
+-- ALTER TABLE "transaction" ADD COLUMN "date" timestamp NOT NULL;
+-- ALTER TABLE "transaction" ADD COLUMN "description" text NOT NULL;
+-- ALTER TABLE "transaction" ADD COLUMN "reference" text;
+-- ALTER TABLE "transaction" ADD COLUMN "user_id" text NOT NULL;
+-- ALTER TABLE "transaction" ADD COLUMN "created_at" timestamp DEFAULT now() NOT NULL;
+-- ALTER TABLE "transaction" ADD COLUMN "updated_at" timestamp DEFAULT now() NOT NULL;
+-- 
+-- ALTER TABLE "transaction_line" ADD COLUMN "transaction_id" integer NOT NULL;
+-- ALTER TABLE "transaction_line" ADD COLUMN "account_id" integer NOT NULL;
+-- ALTER TABLE "transaction_line" ADD COLUMN "amount" numeric(15, 2) NOT NULL;
+-- ALTER TABLE "transaction_line" ADD COLUMN "description" text;
+-- ALTER TABLE "transaction_line" ADD COLUMN "created_at" timestamp DEFAULT now() NOT NULL;
+-- ALTER TABLE "transaction_line" ADD COLUMN "updated_at" timestamp DEFAULT now() NOT NULL;
+-- 
+-- ALTER TABLE "budget" ADD COLUMN "name" text NOT NULL;
+-- ALTER TABLE "budget" ADD COLUMN "account_id" integer NOT NULL;
+-- ALTER TABLE "budget" ADD COLUMN "allocated" numeric(15, 2) NOT NULL;
+-- ALTER TABLE "budget" ADD COLUMN "period" text NOT NULL;
+-- ALTER TABLE "budget" ADD COLUMN "user_id" text NOT NULL;
+-- ALTER TABLE "budget" ADD COLUMN "created_at" timestamp DEFAULT now() NOT NULL;
+-- ALTER TABLE "budget" ADD COLUMN "updated_at" timestamp DEFAULT now() NOT NULL;
+-- 
+-- ALTER TABLE "report" ADD COLUMN "name" text NOT NULL;
+-- ALTER TABLE "report" ADD COLUMN "type" text NOT NULL;
+-- ALTER TABLE "report" ADD COLUMN "start_date" timestamp NOT NULL;
+-- ALTER TABLE "report" ADD COLUMN "end_date" timestamp NOT NULL;
+-- ALTER TABLE "report" ADD COLUMN "data" text;
+-- ALTER TABLE "report" ADD COLUMN "user_id" text NOT NULL;
+-- ALTER TABLE "report" ADD COLUMN "created_at" timestamp DEFAULT now() NOT NULL;
+-- ALTER TABLE "report" ADD COLUMN "updated_at" timestamp DEFAULT now() NOT NULL;

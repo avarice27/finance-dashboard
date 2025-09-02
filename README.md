@@ -112,22 +112,39 @@ NEXT_PUBLIC_BETTER_AUTH_URL=http://localhost:3000
 - 🔒 Modern authentication patterns
 - 🐳 Full Docker support with multi-stage builds
 - 🚀 Production-ready deployment configuration
+- 💰 Finance Dashboard with accounting features
+- 📊 Financial reporting and visualization
+- 📈 Budget tracking and management
+- 📋 Transaction management
 
 ## Project Structure
 
 ```
 codeguide-starter-fullstack/
 ├── app/                        # Next.js app router pages
+│   ├── api/                   # API routes
+│   │   ├── auth/              # Authentication API
+│   │   └── finance/           # Finance API routes
+│   ├── dashboard/             # Dashboard pages
 │   ├── globals.css            # Global styles with dark mode
 │   ├── layout.tsx             # Root layout with providers
 │   └── page.tsx               # Main page
 ├── components/                # React components
-│   └── ui/                    # shadcn/ui components (40+)
+│   ├── ui/                    # shadcn/ui components (40+)
+│   ├── account-manager.tsx    # Account management component
+│   ├── budget-tracker.tsx     # Budget tracking component
+│   ├── financial-overview.tsx # Financial overview component
+│   ├── financial-reports.tsx  # Financial reporting component
+│   └── transaction-manager.tsx# Transaction management component
 ├── db/                        # Database configuration
 │   ├── index.ts              # Database connection
+│   ├── queries.ts            # Database queries
 │   └── schema/               # Database schemas
+│       ├── auth.ts           # Authentication schema
+│       └── finance.ts        # Finance schema
 ├── docker/                    # Docker configuration
 │   └── postgres/             # PostgreSQL initialization
+├── drizzle/                   # Drizzle migrations
 ├── hooks/                     # Custom React hooks
 ├── lib/                       # Utility functions
 │   ├── auth.ts               # Better Auth configuration
